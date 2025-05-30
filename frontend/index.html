@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaria Detection</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="card">
+            <h1><i class="fas fa-microscope"></i> Malaria Detector</h1>
+            <p class="subtitle">Upload a blood cell image to detect malaria infection</p>
+
+            <div class="upload-box" id="uploadBox">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Click to upload image</p>
+                <input type="file" id="fileInput" accept="image/*">
+            </div>
+
+            <div class="result hidden" id="resultBox">
+                <div class="image-container">
+                    <img id="previewImage" src="" alt="Preview">
+                </div>
+                <div class="result-details">
+                    <h2>Result</h2>
+                    <div class="result-badge" id="resultBadge">
+                        <span id="resultText">No result</span>
+                        <span class="confidence" id="confidenceValue">0%</span>
+                    </div>
+                    <button class="btn" id="resetBtn">Analyze Another</button>
+                </div>
+            </div>
+
+            <div class="loading hidden" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Analyzing...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
